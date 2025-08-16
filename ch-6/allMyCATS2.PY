@@ -12,7 +12,19 @@
 
 # -----------------------------------------------------
 
-supplies = ['pens', 'staplers', 'flamethrowers', 'binders']
-for index, item in enumerate(supplies):
-    print(f'Index {index} in supplies is: {item} ')
+# supplies = ['pens', 'staplers', 'flamethrowers', 'binders']
+# for index, item in enumerate(supplies):
+#     print(f'Index {index} in supplies is: {item} ')
+
+# _______________________________________________________________
+
+# import copy
+
+# spam = ['a', 'b', 'c']
+# chese = copy.copy(spam)
+# chese[1] = 42
+# print(spam)
+# print(chese)
+
+# ------------------------------------
 
