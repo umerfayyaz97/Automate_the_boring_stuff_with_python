@@ -11,9 +11,8 @@ while True:
         print(f'{birthdays[name]} is the birthday of {name}')
     else:
         print("No birthdays exist for " + name)
-        print("What is their birthday?")
+        print("What is their birthday?") 
         bday = input()
         birthdays[name] = bday
         print('Birthday database updated')
-
 
