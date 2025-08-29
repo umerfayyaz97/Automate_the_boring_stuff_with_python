@@ -16,4 +16,14 @@ def is_phone_number(text):
             return False
     return True
 
-print('Is 415-555-4242 a phone number?', is_phone_number('415-555-4212'))
+# print('Is 415-555-4242 a phone number?', is_phone_number('415-555-4212'))
+
+message = 'Call me at 415-555-1011 tomorrow. 415-555-9999 is my office.'
+
+for i in range(len(message)):
+    segment = message[i:i+12]
+#     print(segment)
+    if is_phone_number(segment):
+        print('Phone number found ' + segment)
+
+print('Done')
