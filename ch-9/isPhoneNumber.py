@@ -16,4 +16,4 @@ def is_phone_number(text):
             return False
     return True
 
-print('Is 415-555-4242 a phone number?', is_phone_number('415-555-4232'))
+print('Is 415-555-4242 a phone number?', is_phone_number('415-555-4212'))
