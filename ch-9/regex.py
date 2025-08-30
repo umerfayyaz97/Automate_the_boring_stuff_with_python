@@ -24,11 +24,29 @@ import re
 
 
 #use [] brackets to include all items to look for (similar to a|E|e), ^ for negative.
-vowel_pattern = re.compile(r'[aeiouAEIOU]')
-mo = vowel_pattern.findall('RoboCop eats BABY FOOD')
-print(mo)
+# vowel_pattern = re.compile(r'[aeiouAEIOU]')
+# mo = vowel_pattern.findall('RoboCop eats BABY FOOD')
+# print(mo)
 
 #negative with ^ character
-consonant_pattern = re.compile(r'[^aeiouAEIOU]')
-mo = consonant_pattern.findall('RoboCop eats BABY FOOD')
-print(mo) 
+# consonant_pattern = re.compile(r'[^aeiouAEIOU]')
+# mo = consonant_pattern.findall('RoboCop eats BABY FOOD')
+# print(mo) 
+
+
+#verify BNB/USDT or usdt/bnb
+# pair = re.compile(r'[a-zA-Z]+\/[a-zA-Z]+')
+# mo = pair.findall('BNB/USDT')
+# print(mo)
+
+def is_valid_pair(pair):
+    pattern = re.compile(r'^[A-Z]+\/[A-Z]+')
+
+    if pattern.fullmatch(pair):
+        return True
+    else:
+        return False
+    
+print(f"'BNB/USDT': {is_valid_pair('BNB/USDT')}")   # Output: 'BNB/USDT': True
+print(f"'USDT/BNB': {is_valid_pair('USDT/BNB')}")   # Output: 'USDT/BNB': True
+print(f"'usdt/bnb': {is_valid_pair('usdt/bnb')}")   # Output: 'usdt/bnb': false
