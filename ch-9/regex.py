@@ -15,3 +15,10 @@ print(mo.group())
 # mo = phone_re.search("My number is 455-444-1234")
 
 # print(mo.group())
+
+
+#findall returns a list of strings if there are no groups
+phone_re = re.compile(r'\d{3}-\d{3}-\d{4}')
+mo = phone_re.findall('Cell: 415-555-9999 Work: 212-555-0000')
+print(mo)
+
