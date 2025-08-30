@@ -40,7 +40,7 @@ import re
 # print(mo)
 
 def is_valid_pair(pair):
-    pattern = re.compile(r'^[A-Z]+\/[A-Z]+')
+    pattern = re.compile(r'^[A-Z]+\/[A-Z]+$')
 
     if pattern.fullmatch(pair):
         return True
