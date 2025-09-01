@@ -9,10 +9,9 @@ phone_re = re .compile(r'''(
     (\s*(ext|x|ext\.)\s*(\d{2,5}))? # Extension
     )''', re.VERBOSE)
 
-rmail_re = re.compile(r'''([a-zA-z0-9.%+-]+ #usermame
+email_re = re.compile(r'''([a-zA-z0-9.%+-]+ #usermame
                       @  #symbol
                       [a-zA-Z0-9.-]+ #domain name
                       (\.[a-zA-Z]{2,4}) #dot-somethins                
                     )''', re.VERBOSE)
 
- 
