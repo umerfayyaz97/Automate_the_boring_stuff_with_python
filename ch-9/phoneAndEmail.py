@@ -1,6 +1,6 @@
 import re
 
-phone_re = re .compile(r'''(
+phone_re = re.compile(r'''(
     (\d{3}|\(\d{3}\))? # Area code
     (\s|-|\.)? # Separator
     (\d{3}) # First three digits
