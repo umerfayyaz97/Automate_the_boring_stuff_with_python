@@ -11,5 +11,14 @@ from pathlib import Path
 # print(Path.cwd())
 
 #home directory
+# print(Path.home())
 
-print(Path.home())
+
+file = open('test1.txt', 'w', encoding='UTF-8')
+file.write('Hello')
+file.close()
+
+opening = open('test1.txt', encoding='UTF-8')
+content = opening.read()
+print(content)
+opening.close()
