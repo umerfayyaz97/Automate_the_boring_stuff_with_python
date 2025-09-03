@@ -33,8 +33,9 @@ for num in range(5):
    
  
     print(f"{num} . What is the Capital of {states[num]} ?" )
-    for i in range(4):
-        print(f'{'ABCD'[i]}. { answer_options[i]} \n')
+    for i, option in enumerate(answer_options):
+        print(f'{'ABCD'[i]}. {option} ')
         #Display correct answer too
     print(f'Correct answer: {correct_ans} ')
     
+
