@@ -4,6 +4,12 @@
 
 import requests
 
-response = requests.get('https://automatetheboringstuff.com/files/rj.txt')
+# response = requests.get('https://automatetheboringstuff.com/files/rj.txt')
+# print(response.status_code)
 
-print(type(response))
+
+#raise error if not loaded correctly
+response = requests .get('https://inventwithpython.com/page_that_does_not_exist')
+response.raise_for_status()
+# print(response.status_code) #404
+
