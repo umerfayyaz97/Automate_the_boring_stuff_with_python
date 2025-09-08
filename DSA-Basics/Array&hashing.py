@@ -13,6 +13,10 @@ def has_duplicate(nums):
     return False
 
 
-print(f"Fast way with [1, 2, 3, 1]: {has_duplicate([1, 2, 3, 1])}")
-print(f"Fast way with [1, 2, 3, 4]: {has_duplicate([1, 2, 3, 4])}")
+# print(f"Fast way with [1, 2, 3, 1]: {has_duplicate([1, 2, 3, 1])}")
+# print(f"Fast way with [1, 2, 3, 4]: {has_duplicate([1, 2, 3, 4])}")
 
+# print(has_duplicate("SSTRINGsss"))
+dict = {'key1': 'value1', 'key2': 'value2', 'key3': 'value1'}
+
+print(has_duplicate(dict.values()))
