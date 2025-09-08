@@ -22,11 +22,19 @@ from itertools import permutations
 
 # print(list(permutations(range(3),2)))
 
-s,k = input().split()
+# s,k = input().split()
 
-print(sorted(s))
-per = permutations(sorted(s), int(k))
+# print(sorted(s))
+# per = permutations(sorted(s), int(k))
 
-for p in per:
-    print(p)
-    print("".join(p))
+# for p in per:
+#     print(p)
+#     print("".join(p))
+
+# per = permutations([1,2])
+
+# for p in per:
+#     s = map(str, p)
+#     print("".join(s))
+    
+
