@@ -53,3 +53,29 @@ from itertools import permutations
 
 # print(unique_list[-2])
 
+
+
+# a = [[a,b] for a in range(3)  for b in range(3)]
+# print(a)
+
+records = [[5,'Harry'],[37.21,'Berry'],[37.21,'Tina'],[37.2,'Akriti'],[41,'Harsh']]
+
+scores = [record[0] for record in records ]
+
+# print(scores)
+unique = set(scores)
+sorted_values = sorted(unique)
+
+second_lowest = sorted_values[1]
+print(second_lowest)
+
+
+runner_ups = []
+for item in records:
+    if item[0] == second_lowest:
+        runner_ups.append(item[1])
+
+runner_ups.sort()
+
+for name in runner_ups:
+    print(name)
