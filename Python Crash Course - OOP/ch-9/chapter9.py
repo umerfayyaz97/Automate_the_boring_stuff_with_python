@@ -1,10 +1,10 @@
 
 class Dog:
     """Attempt to model Dogs """
-    def __init__(self, name, age):
+    def __init__(self, name: str, age: int):
         """Initialize attributies """
-        self.name = name
-        self.age = age
+        self.name  = name
+        self.age  = age 
     
     def sit(self):
         """Simulate a dog sitting """
@@ -14,3 +14,8 @@ class Dog:
         """Simulate rolling of a dog"""
         print(f"{self.name} rolled over!")
 
+
+my_dog = Dog("tommy", 2)
+
+print(my_dog.name)
+my_dog.sit()
