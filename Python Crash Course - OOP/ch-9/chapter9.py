@@ -10,7 +10,7 @@ class Dog:
         """Simulate a dog sitting """
         print(f"{self.name} is now sitting")
 
-    def roll(self);
+    def roll(self):
         """Simulate rolling of a dog"""
         print(f"{self.name} rolled over!")
 
