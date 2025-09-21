@@ -71,8 +71,9 @@ class ElectricCar(Car):
         # self.battery_watt = batteryWatt
         print(f'This car has {self.battery_watt}-KWH battery')
 
-my_prius = ElectricCar("Toyota", "Prius", 2004)
+my_prius = ElectricCar("Toyota", "Prius", 2004, 2000)
 
 print(my_prius.get_descriptive_name())
+my_prius.describe_battery()
 
         
