@@ -29,6 +29,8 @@
 # my_dog.update_streak(5)
 # print(my_dog.play_streak)
 
+
+
 class Car:
     """Model a car"""
 
@@ -60,20 +62,41 @@ class Car:
 class ElectricCar(Car):
     """Represent electric car"""
     
-    def __init__(self, make:str, model:str, year:int, battery_watt:int):
+    def __init__(self, make:str, model:str, year:int):
         #call the parents init to handle common attributes
         super().__init__(make,model,year)
+        self.battery = Battery(65)
 
-        self.battery_watt = battery_watt
+
+class Battery:
+
+    """Model battery"""
+
+    def __init__(self, batteryWatt: int):
+        self.battery_watt = batteryWatt
+
+    def describe_battery(self):
+        print(f'This car has {self.battery_watt}-KWH battery')
+    
+    def get_miles(self):
+        """Print range of car depending on battery size"""
+        if self.battery_watt == 40:
+            range = 80
+        elif self.battery_watt == 65:
+            range = 150
+
+        print(f"This car can go {range} miles on a full charge")
 
     
-    def describe_battery(self):
-        # self.battery_watt = batteryWatt
-        print(f'This car has {self.battery_watt}-KWH battery')
 
-my_prius = ElectricCar("Toyota", "Prius", 2004, 2000)
+my_prius = ElectricCar("Toyota", "Prius", 2004)
 
 print(my_prius.get_descriptive_name())
-my_prius.describe_battery()
+my_prius.battery.describe_battery()
+my_prius.battery.get_miles()
+
+
+        
+
 
         
