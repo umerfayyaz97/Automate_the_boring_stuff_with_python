@@ -37,10 +37,11 @@ class Car:
         self.model = model 
         self.year = year
         self.odo_meter = 0
+        
 
     def get_descriptive_name(self):
         """Get full Name of Car"""
-        long_name = f"{self.make} {self.model} {self.year}"
+        long_name = f"{self.make} {self.model} {self.year} "
         return long_name.title()
     
     def  read_odometer(self):
@@ -53,12 +54,22 @@ class Car:
             print("You cannot reverse meter")
     
 
+
+    
+
 class ElectricCar(Car):
     """Represent electric car"""
     
-    def __init__(self, make:str, model:str, year:int):
+    def __init__(self, make:str, model:str, year:int, battery_watt:int):
+        #call the parents init to handle common attributes
         super().__init__(make,model,year)
 
+        self.battery_watt = battery_watt
+
+    
+    def describe_battery(self):
+        # self.battery_watt = batteryWatt
+        print(f'This car has {self.battery_watt}-KWH battery')
 
 my_prius = ElectricCar("Toyota", "Prius", 2004)
 
