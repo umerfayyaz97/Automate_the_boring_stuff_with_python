@@ -48,15 +48,22 @@
 # Dunder methods
 
 class Book:
-    def __init__(self, title:str, author:str):
+    def __init__(self, title:str, author:str, page:int):
         self.title = title
         self.author = author
+        self.page = page
     
     def __str__(self):
         """Returns a user friendly string representation"""
         return f"{self.title} by {self.author}"
     
-my_book = Book('ATBSWP', 'Umer')
+    def __len__(self):
+        """Returns length of book"""
+        return self.page
+
+    
+my_book = Book('ATBSWP', 'Umer', 100)
 
 print(my_book)
+print(f'{len(my_book)} ')
 
