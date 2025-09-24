@@ -48,10 +48,18 @@
 # Dunder methods
 
 class Book:
+
+    #class attribute
+    book_count = 0
+
     def __init__(self, title:str, author:str, page:int):
         self.title = title
         self.author = author
         self.page = page
+
+        Book.book_count +=1
+
+        self.id  = Book.book_count
     
     def __str__(self):
         """Returns a user friendly string representation"""
@@ -61,9 +69,17 @@ class Book:
         """Returns length of book"""
         return self.page
 
+    def __repr__(self):
+        return f"Object of Book with id {self.id}"
+
     
 my_book = Book('ATBSWP', 'Umer', 100)
+my_book_2 = Book('ATBSWP', 'Umer', 100)
 
-print(my_book)
-print(f'{len(my_book)} ')
+print(repr(my_book))
+print(repr(my_book_2))
+
+# print(my_book)
+# print(f'{len(my_book)} ')
+
 
