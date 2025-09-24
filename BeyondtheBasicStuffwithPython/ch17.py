@@ -76,10 +76,32 @@ class Book:
 my_book = Book('ATBSWP', 'Umer', 100)
 my_book_2 = Book('ATBSWP', 'Umer', 100)
 
-print(repr(my_book))
-print(repr(my_book_2))
+# print(repr(my_book))
+# print(repr(my_book_2))
 
 # print(my_book)
 # print(f'{len(my_book)} ')
 
+class MesssageList:
+    def __init__(self, message_data):
+        self._messages = message_data
 
+    def __getitem__(self, position):
+        return self._messages[position]
+    
+    def __iter__(self):
+        for msg in self._messages:
+            yield msg
+    
+api_response_data = [
+    {'role': 'assistant', 'content': 'Hello! How can I help?'},
+    {'role': 'user', 'content': 'What is the capital of Pakistan?'}
+]
+
+messages_list = MesssageList(api_response_data)
+
+first_message = messages_list[0]
+print(f"First message is from {first_message['role']}")
+
+for message in messages_list:
+    print(f" Role :{message['role']}, content : {message['content']} ")
