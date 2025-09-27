@@ -25,4 +25,3 @@
 
 # fruits_reversed = sorted(fruits, key=reverse)
 # print(fruits_reversed)
-
