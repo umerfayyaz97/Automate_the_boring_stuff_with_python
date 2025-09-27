@@ -12,5 +12,17 @@
 # m = map(factorial, range(11))
 # print(list(m))
 # print(m)
+# -----------------------------------------
 
+# sorting a lost of words by length
+
+# fruits = ['strawberry', 'fig', 'apple', 'cherry', 'raspberry', 'banana']
+# fruits_sorted = sorted(fruits, key=len)
+# print(fruits_sorted)
+
+# def reverse(word):
+#     return word[::-1]
+
+# fruits_reversed = sorted(fruits, key=reverse)
+# print(fruits_reversed)
 
