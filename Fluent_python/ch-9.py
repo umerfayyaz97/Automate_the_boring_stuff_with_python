@@ -25,3 +25,20 @@
 
 # fruits_reversed = sorted(fruits, key=reverse)
 # print(fruits_reversed)
+# ---------------------------------------
+# functools and operator
+
+# from functools import partial
+
+# def my_fn(base, exponent):
+#     return base ** exponent
+
+# #we freeze the exponent to two instead of passing everytime
+
+# square = partial(my_fn, exponent = 2)
+
+# print(f' using the original fn: {my_fn(10,2)}')
+# print(f' using the partial fn: {square(10,3)}')
+
+# -------------------------------------------
+ 
