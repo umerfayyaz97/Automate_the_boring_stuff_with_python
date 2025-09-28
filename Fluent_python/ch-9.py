@@ -41,15 +41,29 @@
 # print(f' using the partial fn: {square(10,3)}')
 
 # -------------------------------------------
-metro_data = [
- ('Tokyo', 'JP', 36.933, (35.689722, 139.691667)),
- ('Delhi NCR', 'IN', 21.935, (28.613889, 77.208889)),
- ('Mexico City', 'MX', 20.142, (19.433333, -99.133333)),
- ('New York-Newark', 'US', 20.104, (40.808611, -74.020386)),
- ('São Paulo', 'BR', 19.649, (-23.547778, -46.635833)),
- ]
+# metro_data = [
+#  ('Tokyo', 'JP', 36.933, (35.689722, 139.691667)),
+#  ('Delhi NCR', 'IN', 21.935, (28.613889, 77.208889)),
+#  ('Mexico City', 'MX', 20.142, (19.433333, -99.133333)),
+#  ('New York-Newark', 'US', 20.104, (40.808611, -74.020386)),
+#  ('São Paulo', 'BR', 19.649, (-23.547778, -46.635833)),
+#  ]
 
-from operator import itemgetter
-for city in sorted(metro_data, key = itemgetter(2)):
-    print(city)
+# from operator import itemgetter
+# for city in sorted(metro_data, key = itemgetter(2)):
+#     print(city)
+
+# ------------------------------------------------
+# named tuples
+ 
+# from collections import namedtuple
+
+# Student = namedtuple("Student", ['name', 'age', 'major'])
+
+# s1 = Student('Ali', '21', 'Math')
+
+# print(s1)
+
+# -------------------------------------------------
+# getattr
 
