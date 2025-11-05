@@ -65,7 +65,7 @@
 # print(s1)
 
 # -------------------------------------------------
-# getattr (works on objects with nanes attr, named tuples and classes)
+# getattr (works on objects with named attr, named tuples and classes)
 
 # from collections import namedtuple
 
@@ -90,4 +90,7 @@
 #     print(city)
 
 # -------------------------------------------------------------
+
+
+# fluent python
 
